@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Manager View Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Your CSS styles here */
+        body {
+            position: relative;
+            width: 1080px;
+            height: 1623px;
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        /* Navbar hr styles */
+        .navbar-hr {
+            position: absolute;
+            width: 1086px;
+            /* w */
+            height: 0px;
+            /* h */
+            left: -3px;
+            /* x */
+            top: 20px;
+            /* y */
+            border: 1px solid #E4E3E4;
+            /* RENK */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: #FFFFFF;
+            height: 202px;
+        }
+
+        .navbar img {
+            position: absolute;
+            width: 94px;
+            height: 94px;
+            left: 17px;
+            top: 47px;
+
+
+        }
+
+        .navbar .btn-1 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 140px;
+            top: 72px;
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-2 {
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 304px;
+            top: 72px;
+
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-3 {
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 469px;
+            top: 72px;
+
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-5 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            left: 770px;
+            top: 72px;
+            background: #EAEAEA;
+            border: 1px solid #E2DBDB;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+
+        .navbar .btn-6 {
+            position: absolute;
+            width: 144px;
+            height: 45px;
+            left: 829px;
+            top: 72px;
+
+            background: #EAEAEA;
+            border: 1px solid #E2DBDB;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .icerik {
+            padding-bottom: 50px;
+            background-image: url(image3.png);
+            background-position: center;
+            background-size: 120%;
+            background-repeat: no-repeat;
+            width: 1000px;
+            /* w */
+            height: 1100px;
+            /* h */
+            left: 0px;
+            /* X koordinatı */
+            top: 226px;
+            /* Y koordinatı */
+
+        }
+
+
+
+        .navbarbitis-hr {
+            position: absolute;
+            width: 1080px;
+            /* w */
+            height: 12px;
+            /* h */
+            left: 0px;
+            /* x */
+            top: 1294px;
+            /* y */
+            background-color: #00B1AD;
+            border: none;
+            z-index: 1;
+            /* Bu satırı ekleyerek .navbarbitis-hr'yi diğer elementlerin önüne getiriyoruz */
+
+        }
+      
+
+
+        /* Footer styles */
+        footer {
+
+            position: absolute;
+            width: 1080px;
+            height: 329px;
+            left: 0px;
+            top: 1320px;
+
+            background: #EAEAEA;
+        }
+
+        .img-2 {
+            position: absolute;
+            width: 76px;
+            height: 76px;
+            left: 114px;
+            top: 50px;
+            border-radius: 46px;
+        }
+        .yazı{
+            position: absolute;
+            width: 213px;
+            height: 210px;
+            left: 400px;
+            top: 50px;
+          
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <hr class="navbar-hr">
+    <!-- Navbar -->
+    <div class="navbar"> 
+        <img src="indir.png" alt="Logo">
+        <a href="#" class="btn-1" style="text-align: center; padding:10px; color:#000">Main Page</a>
+        <a href="#" class="btn-2" style="text-align: center; padding:10px; color:#000">Categories</a>
+        <a href="#" class="btn-3" style="text-align: center; padding:10px; color:#000">Club Page</a>
+        <div class="search ">
+            <a href="#" class="btn-5" style="text-align: center; padding:11px; color:#000"><i class="fas fa-search"></i></a>
+        </a>
+        </div>
+        <a href="#" class="btn-6" style="text-align: center; padding:10px; color:#000">Profile</a>
+    </div>
+
+    <!-- İçerik -->
+    <div class="icerik">
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="position: absolute; width: 528px; height: 342px; left: 86px; top: 174px; border-radius: 40px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="slide.png" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="image3.png" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="image3.jpg" class="d-block w-100" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <hr class="navbarbitis-hr">
+
+            <!-- Footer -->
+            <footer>
+                <div>
+                    <img src="indir2.png" alt="Logo" class="img-2">
+
+                    <div style="position: absolute; width: 76px;height: 116px;left: 200px;top: 50px;
+                   text-align:left">
+                        TC
+                        Üsküdar Üniversitesi
+                    </div>
+                    <div class="footer">
+                        <div class="yazı" style="text-align: center;">
+                            Club Index Page<br><br>
+                            Club Page<br><br>
+                            Post Publishing Page<br><br>
+                            Login
+                        </div>
+                        <div style="position: absolute;
+                        width: 213px;
+                        height: 210px;
+                        left: 600px;
+                        top: 50px;text-align: center;">Contact
+                        </div>
+                    </div>
+            </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Manager View Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Your CSS styles here */
+        body {
+            position: relative;
+            width: 1080px;
+            height: 1623px;
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        /* Navbar hr styles */
+        .navbar-hr {
+            position: absolute;
+            width: 1086px;
+            /* w */
+            height: 0px;
+            /* h */
+            left: -3px;
+            /* x */
+            top: 20px;
+            /* y */
+            border: 1px solid #E4E3E4;
+            /* RENK */
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: #FFFFFF;
+            height: 202px;
+        }
+
+        .navbar img {
+            position: absolute;
+            width: 94px;
+            height: 94px;
+            left: 17px;
+            top: 47px;
+
+
+        }
+
+        .navbar .btn-1 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 140px;
+            top: 72px;
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-2 {
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 304px;
+            top: 72px;
+
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-3 {
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 469px;
+            top: 72px;
+
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-4 {
+            box-sizing: border-box;
+
+            position: absolute;
+            width: 137px;
+            height: 45px;
+            left: 621px;
+            top: 72px;
+
+            background: #00B1AD;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .navbar .btn-5 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            left: 770px;
+            top: 72px;
+            background: #EAEAEA;
+            border: 1px solid #E2DBDB;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+       
+
+
+        .navbar .btn-6 {
+            position: absolute;
+            width: 144px;
+            height: 45px;
+            left: 829px;
+            top: 72px;
+
+            background: #EAEAEA;
+            border: 1px solid #E2DBDB;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .icerik {
+            padding-bottom: 50px;
+            background-image: url(images/image3.png);
+            background-position: center;
+            background-size: 120%;
+            background-repeat: no-repeat;
+            width: 1000px;
+            /* w */
+            height: 1100px;
+            /* h */
+            left: 0px;
+            /* X koordinatı */
+            top: 226px;
+            /* Y koordinatı */
+
+        }
+
+
+        /* Profile section styles */
+        .profile-section {
+            position: absolute;
+            width: 184.37px;
+            /* w */
+            height: 170px;
+            /* h */
+            left: 292px;
+            /* X koordinatı */
+            top: 235px;
+            /* Y koordinatı */
+            margin-top: 0;
+            /* margin-top sıfırlanıyor */
+            text-align: center;
+        }
+
+
+        .profile-picture {
+            width: 184.37px;
+            /* w */
+            height: 170px;
+            /* h */
+            background-image: url('images/profile.png');
+            /* Profil fotoğrafının URL'si */
+            background-size: cover;
+            border-radius: 0%;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 100;
+        }
+
+        .change-btn-1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 103px;
+            /* w */
+            height: 29px;
+            /* h */
+            left: 336px;
+            /* x */
+            top: 413px;
+            /* y */
+            background-color: #00B1AD;
+            border-radius: 23px;
+            border: none;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+
+        }
+
+
+        /* About section styles */
+        .about-section {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        /* Stil ve konumlandırma */
+        .about-title {
+            color: red;
+            /* Post yazısının rengi */
+            font-size: 16px;
+            /* Yazı boyutu */
+            position: absolute;
+            width: 96px;
+            /* w */
+            height: 29px;
+            /* h */
+            left: 95px;
+            /* x */
+            top: 487px;
+            /* y */
+        }
+
+        .about-content {
+            box-sizing: border-box;
+            position: absolute;
+            width: 560px;
+            /* w */
+            height: 182px;
+            /* h */
+            left: 113px;
+            /* x */
+            top: 522px;
+            /* y */
+            background: #EAEAEA;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .change-btn {
+            box-sizing: border-box;
+            position: absolute;
+            width: 103px;
+            /* w */
+            height: 29px;
+            /* h */
+            left: 567px;
+            /* x */
+            top: 732px;
+            /* y */
+            background: #00B1AD;
+            border: 1px solid #E2DBDB;
+            border-radius: 23px;
+            color: white;
+            text-align: center;
+            line-height: 29px;
+        }
+
+        /* Post section styles */
+        .post-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .post-title {
+            color: red;
+            /* Post yazısının rengi */
+            font-size: 16px;
+            /* Yazı boyutu */
+            position: absolute;
+            width: 96px;
+            /* w */
+            height: 29px;
+            /* h */
+            left: 502px;
+            /* x */
+            top: 785px;
+            /* y */
+        }
+
+        .post-content {
+            box-sizing: border-box;
+            position: absolute;
+            width: 462px;
+            /* w */
+            height: 248px;
+            /* h */
+            left: 522px;
+            /* x */
+            top: 828px;
+            /* y */
+            background: #EAEAEA;
+            border: 1px solid #00B1AD;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 23px;
+        }
+
+        .attach-btn {
+            width: 38px;
+            /* w */
+            height: 38px;
+            /* h */
+            position: absolute;
+            left: 548px;
+            /* x */
+            top: 1024px;
+            /* y */
+            border: none;
+        }
+
+        .hr-line {
+            position: absolute;
+            width: 419px;
+            /* w */
+            height: 0px;
+            /* h */
+            left: 544px;
+            /* x */
+            top: 1013px;
+            /* y */
+            border: 1px solid #00B1AD;
+            /* Renk */
+        }
+
+        .publish-btn {
+            box-sizing: border-box;
+            position: absolute;
+            width: 103px;
+            /* w */
+            height: 29px;
+            /* h */
+            left: 881px;
+            /* x */
+            top: 1110px;
+            /* y */
+            background: #00B1AD;
+            border: 1px solid #E2DBDB;
+            border-radius: 23px;
+            color: #E2DBDB;
+            /* Text rengi */
+            text-align: center;
+            line-height: 29px;
+        }
+
+        .navbarbitis-hr {
+            position: absolute;
+            width: 1080px;
+            /* w */
+            height: 12px;
+            /* h */
+            left: 0px;
+            /* x */
+            top: 1294px;
+            /* y */
+            background-color: #00B1AD;
+            border: none;
+            z-index: 1;
+            /* Bu satırı ekleyerek .navbarbitis-hr'yi diğer elementlerin önüne getiriyoruz */
+
+        }
+
+
+        /* Footer styles */
+        footer {
+
+            position: absolute;
+            width: 1080px;
+            height: 329px;
+            left: 0px;
+            top: 1320px;
+
+            background: #EAEAEA;
+        }
+
+        .img-2 {
+            position: absolute;
+            width: 76px;
+            height: 76px;
+            left: 114px;
+            top: 50px;
+            border-radius: 46px;
+        }
+        .yazı{
+            position: absolute;
+            width: 213px;
+            height: 210px;
+            left: 400px;
+            top: 50px;
+          
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <hr class="navbar-hr">
+    <!-- Navbar -->
+    <div class="navbar"> 
+        <img src="images/indir.png" alt="Logo">
+        <a href="#" class="btn-1" style="text-align: center; padding:10px; color:#000">Main Page</a>
+        <a href="#" class="btn-2" style="text-align: center; padding:10px; color:#000">Categories</a>
+        <a href="#" class="btn-3" style="text-align: center; padding:10px; color:#000">Club Page</a>
+        <a href="#" class="btn-4" style="text-align: center; padding:2px; color:#000">Event Application Form</a>
+        <div class="search ">
+            <a href="#" class="btn-5" style="text-align: center; padding:11px; color:#000"><i class="fas fa-search"></i></a>
+        </a>
+        </div>
+        <a href="#" class="btn-6" style="text-align: center; padding:10px; color:#000">Profile</a>
+    </div>
+
+    <!-- İçerik -->
+    <div class="icerik">
+
+        <!-- Profile section -->
+        <div class="profile-section">
+            <div class="profile-picture"></div>
+            <a href="#" class="change-btn-1">Change</a>
+        </div>
+
+        <!-- About section -->
+        <div class="about-section">
+            <h2 class="about-title">About</h2>
+            <div class="about-content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                to
+                make a type specimen book.
+            </div>
+        </div>
+
+        <!-- Change button -->
+        <button class="change-btn">Change</button>
+
+        <!-- Post section -->
+        <div class="post-section">
+            <h2 class="post-title">Post</h2>
+            <div>
+                <div class="post-content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book.
+                </div>
+                <button class="attach-btn" style="text-align: center; color:#000 "><i class="fa-solid fa-paperclip"></i></button>
+                <hr class="hr-line">
+            </div>
+            <div>
+                <button class="publish-btn">Publish</button>
+            </div>
+            <hr class="navbarbitis-hr">
+
+            <!-- Footer -->
+            <footer>
+                <div>
+                    <img src="images/indir2.png" alt="Logo" class="img-2">
+
+                    <div style="position: absolute; width: 76px;height: 116px;left: 200px;top: 50px;
+                   text-align:left">
+                        TC
+                        Üsküdar Üniversitesi
+                    </div>
+                    <div class="footer">
+                        <div class="yazı" style="text-align: center;">
+                            Club Index Page<br><br>
+                            Club Page<br><br>
+                            Post Publishing Page<br><br>
+                            Login
+                        </div>
+                        <div style="position: absolute;
+                        width: 213px;
+                        height: 210px;
+                        left: 600px;
+                        top: 50px;text-align: center;">Contact
+                        </div>
+                    </div>
+            </footer>
+
+</body>
+
+</html>
